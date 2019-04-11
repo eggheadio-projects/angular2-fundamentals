@@ -31,4 +31,5 @@ All notable changes to “Get Started with Angular” will be documented in this
 
 ### Removed
 - Code that the Master branch consisted of, as it was identical to the code for lesson 13. 
+- all the branches which previously stored lesson code
 
