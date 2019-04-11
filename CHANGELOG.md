@@ -1,4 +1,4 @@
-\# Changelog
+# Changelog
 
 All notable changes to “Get Started with Angular” will be documented in this file. 
 
