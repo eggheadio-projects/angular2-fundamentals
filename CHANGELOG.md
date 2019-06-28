@@ -1,17 +1,38 @@
 # Changelog
 
-All notable changes to “Get Started with Angular” will be documented in this file. 
+All notable changes to “Get Started with Angular” will be documented in this file.
+
+ran npm install and npm start
+
+ran into `The serve command requires to be run in an Angular project, but a project definition could not be found.`
+
+found this stack overflow that solves the issue: https://stackoverflow.com/questions/53096996/angular-cli-error-the-serve-command-requires-to-be-run-in-an-angular-project-b
+
+suggests running this command:
+
+`ng update @angular/cli --migrate-only --from=4.1.1`
+
+that command needs all the dependencies to be updated
+
+ran `ng update --all` to update
+
+added `@angular-devkit/schematics` and `@angular/cli` to the project because updated dependencies need
+
+ran `ng update @angular/cli --migrate-only --from=4.1.1` again
+
+
+
 
 ## 1.0.0
-- Code is compatible with codesandbox. 
-- The instructor's github repo had all the lesson code from the beginning of each lesson rather than the end. 
-- `webpack-cli` now has to be added as a devDependency. 
+- Code is compatible with codesandbox.
+- The instructor's github repo had all the lesson code from the beginning of each lesson rather than the end.
+- `webpack-cli` now has to be added as a devDependency.
 
 ### Added
 
 - This file.
-- .JSON output file 
-- All the lesson code as subfolders within the main branch, rather than as individual branches. 
+- .JSON output file
+- All the lesson code as subfolders within the main branch, rather than as individual branches.
 
 ### Changed
 
@@ -27,9 +48,9 @@ All notable changes to “Get Started with Angular” will be documented in this
 - Update `rxjs#5.0.0->6.4.1`.
 - Update `ts-helpers#1.1.1->1.1.2`.
 - Update `zone.js#0.8.10->0.9.0`.
-- Breaking Change: For the update from core-js 2.4.1 -> 3.0.1, the polyfills.ts import from "core-js/es6/" and "core-js/es7/" deprecated for all modules. Changed to "core-js/features/".  
+- Breaking Change: For the update from core-js 2.4.1 -> 3.0.1, the polyfills.ts import from "core-js/es6/" and "core-js/es7/" deprecated for all modules. Changed to "core-js/features/".
 
 ### Removed
-- Code that the Master branch consisted of, as it was identical to the code for lesson 13. 
+- Code that the Master branch consisted of, as it was identical to the code for lesson 13.
 - all the branches which previously stored lesson code
 
