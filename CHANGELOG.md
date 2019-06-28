@@ -20,6 +20,12 @@ added `@angular-devkit/schematics` and `@angular/cli` to the project because upd
 
 ran `ng update @angular/cli --migrate-only --from=4.1.1` again
 
+ran into this error:
+```
+(app.assets || []).map is not a function
+```
+
+
 
 
 
