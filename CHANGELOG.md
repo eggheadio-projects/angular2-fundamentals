@@ -25,6 +25,53 @@ ran into this error:
 (app.assets || []).map is not a function
 ```
 
+removed `assets: "assets"` from `angular-cli.json` and re-ran `ng update` command
+
+Ran npm install: errors out again
+
+installed `webpack`
+
+run npm install again now ran into this error:
+
+```
+Cannot find module 'webpack/lib/removeAndDo'
+```
+
+We've added and removed a good number of packages, going to delete `node_modules` and `package-lock.json` and `npm install` again
+
+deleted `angular-cli` as this package was accidentally added in place of `@angular-cli`
+
+ran `npm start`, ran into this error:
+
+```
+Cannot find module '@angular/compiler-cli'
+Error: Cannot find module '@angular/compiler-cli'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:582:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:508:25)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+```
+
+installed `@angular/compiler-cli`
+
+ran npm start again and ran into this error:
+```
+ERROR in The Angular Compiler requires TypeScript >=3.4.0 and <3.5.0 but 3.5.2 was found instead
+```
+
+re-installing TypeScript@3.4.2
+
+Angular compiles and errors out with this message:
+
+```
+ERROR in src/app/app.module.ts(4,28): error TS2307: Cannot find module '@angular/http'
+```
+
+In `src/app/app.module.ts` changed `@angular/http` import to `@angular/common/http`
+
+looked at deprecation guide for `@angular/http` https://angular.io/guide/deprecations#angularhttp
+
+`Replace HttpModule with HttpClientModule (from @angular/common/http) in each of your modules.`
 
 
 
